@@ -10,8 +10,8 @@ import android.widget.CursorAdapter;
 import android.widget.TextView;
 
 class NotesCursorAdapter extends CursorAdapter {
-    public NotesCursorAdapter(Context context) {
-        super(context, null, 0);
+    public NotesCursorAdapter(Context context, Cursor c, int flags) {
+        super(context, c, flags);
     }
 
     @Override

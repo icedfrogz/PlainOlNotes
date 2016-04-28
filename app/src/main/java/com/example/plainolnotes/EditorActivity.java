@@ -30,21 +30,17 @@ public class EditorActivity extends AppCompatActivity {
 
         if (uri == null) {
             action = Intent.ACTION_INSERT;
-            setTitle("New note");
+            setTitle(getString(R.string.new_note));
         } else {
             action = Intent.ACTION_EDIT;
             noteFilter = DBOpenHelper.NOTE_ID + "=" + uri.getLastPathSegment();
 
             Cursor cursor = getContentResolver().query(uri, DBOpenHelper.ALL_COLUMNS, noteFilter, null, null);
-            assert cursor != null;
             cursor.moveToFirst();
             oldText = cursor.getString(cursor.getColumnIndex(DBOpenHelper.NOTE_TEXT));
-
             editor.setText(oldText);
             editor.requestFocus();
         }
-
-
     }
 
     @Override

@@ -22,7 +22,6 @@
         android:layout_toEndOf="@+id/imageDocIcon"
         android:layout_toRightOf="@+id/imageDocIcon"
         android:singleLine="true"
-        android:text="@string/dummy_text"
         android:textColor="@color/list_item_text"
         android:textSize="18sp" />
 
